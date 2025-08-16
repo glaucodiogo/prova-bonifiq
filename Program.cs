@@ -13,7 +13,7 @@ builder.Services.AddSwaggerGen();
 
 builder.Services.AddSingleton<RandomService>();
 builder.Services.AddDbContext<TestDbContext>(options =>
-	options.UseSqlServer(builder.Configuration.GetConnectionString("ctx")));
+	options.UseSqlite(builder.Configuration.GetConnectionString("ctx")));
 var app = builder.Build();
 
 // Configure the HTTP request pipeline.
